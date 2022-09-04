@@ -46,3 +46,5 @@ print("\nИсходная строка:\n")
 print(init_text)
 
 input("\n\nНажмите Enter, чтобы выйти..")
+
+# new comment to check commiting of changes into Feature branch to see changes
