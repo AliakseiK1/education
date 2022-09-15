@@ -6,17 +6,22 @@
 
 user_name = str(input("\nИмя пользователя: ")) # Ввести имя пользователя
 
-def account_ballance():
-        print("23.34$") #создаём функцию, которая выводит захардкоданный баланс счёта
+account_ballance = "23.34$"
 
-def decologin(account_balance):
-   def wrapper_decorator():
-    account_balance(user_name)
-    if user_name == "Valera":
-        print (account_balance)
-    else: print("В доступе отказано!")
+#def account_ballance():
+        #print("23.34$") #создаём функцию, которая выводит захардкоданный баланс счёта
+
+
+#user = Valera - only admin for the application
+
+def decologin(*args, **kwargs):
+   def wrapper_decorator(*args, **kwargs):
+    if user_name != "Valera":
+        return "В доступе отказано!"
     return wrapper_decorator
 
 @decologin
-def account_balance(user_name):
-    print(f'Hello {user_name}')
+def account_ballance1():
+    print(account_ballance)
+
+account_ballance1()
