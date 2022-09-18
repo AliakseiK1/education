@@ -17,17 +17,20 @@ print(a)
 for a 
 
 """
-
 import math
 
-up_steps_to_enter = int(input("\nУкажите, на сколько шагов вверх должен подняться робот (целое положительное число): "))
-down_steps_to_enter = int(input("\nУкажите, на сколько шагов вниз должен опуститься робот (целое положительное число): "))
-left_steps_to_enter = int(input("\nУкажите, на сколько шагов влево должен сместиться робот (целое положительное число): "))
-right_steps_to_enter = int(input("\nУкажите, на сколько шагов вправо должен подняться робот (целое положительное число): "))
+print("\nДобро пожаловать в систему управления роботом!\n")
+print("Для того, чтобы задать максимальные значения перемещения влево, вправо, вверх, вниз, введите значения ниже:\n")
 
-a = abs(up_steps_to_enter - down_steps_to_enter)
-print(a)
-b = abs(left_steps_to_enter - right_steps_to_enter)
-print(b)
-distanse = math.sqrt(a ** 2 + b ** 2)
-print(distanse)
+up_steps_to_enter = int(input("\nУкажите, на сколько шагов вверх должен подняться робот (целое число): "))
+down_steps_to_enter = int(input("\nУкажите, на сколько шагов вниз должен опуститься робот (целое число): "))
+left_steps_to_enter = int(input("\nУкажите, на сколько шагов влево должен сместиться робот (целое число): "))
+right_steps_to_enter = int(input("\nУкажите, на сколько шагов вправо должен подняться робот (целое число): "))
+
+side_a = up_steps_to_enter - down_steps_to_enter
+
+side_b = left_steps_to_enter - right_steps_to_enter
+
+hypotenuse_с = int(math.sqrt(side_a ** 2 + side_b ** 2))
+#hypotenuse_с = str(hypotenuse_с)
+print("\nРобот отошел на расстояние, равное {0} шаг(ов)" .format(hypotenuse_с))
